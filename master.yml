@@ -10,3 +10,10 @@
     ansible.builtin.apt_repository:
       repo: deb https://pkg.jenkins.io/debian binary/
     become: yes
+
+  - name:
+    apt:
+      pkg:
+      - openjdk-11-jdk
+      - jenkins
+    become: yes
