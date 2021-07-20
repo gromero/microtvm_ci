@@ -2,6 +2,11 @@
 
   tasks:
   - name:
+    ansible.builtin.apt_key:
+      url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    become: yes
+
+  - name:
     ansible.builtin.apt_repository:
       repo: deb https://pkg.jenkins.io/debian binary/
     become: yes
