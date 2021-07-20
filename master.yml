@@ -1,0 +1,7 @@
+- hosts: master
+
+  tasks:
+  - name:
+    ansible.builtin.apt_repository:
+      repo: deb https://pkg.jenkins.io/debian binary/
+    become: yes
